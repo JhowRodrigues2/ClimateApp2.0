@@ -1,10 +1,11 @@
-import GlobalStyle from "./styles/GlobalStyles";
+import TemperatureNow from "./components/TemperatureNow";
+import { AppContainer } from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <>
-      hello world
-    </>
+    <AppContainer>
+      <TemperatureNow/>
+    </AppContainer>
   );
 }
 
