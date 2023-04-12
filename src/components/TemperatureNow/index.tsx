@@ -5,7 +5,7 @@ const TemperatureNow = () => {
     <TemperatureNowContainer>
       <Location>
         <img src={Pin} alt="icone de localização" />
-        <strong>Teófilo Otoni</strong>
+        <strong>Teófilo Otoni - MG</strong>
       </Location>
       <Temp></Temp>
       <Statistics>

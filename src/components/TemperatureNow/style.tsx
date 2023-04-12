@@ -7,7 +7,8 @@ export const TemperatureNowContainer = styled.section`
   height: 48rem;
   background: url(${BgTempNow});
   position: relative;
-  
+  display: grid;
+  grid-template-rows: max-content 1fr max-content;
   &::before {
     position: absolute;
     content: "";
@@ -22,6 +23,15 @@ export const TemperatureNowContainer = styled.section`
 
 
 export const Location = styled.div`
+display: flex;
+align-items: center;
+justify-self: end;
+padding: 3.2rem 3.2rem 0;
+gap: 0.4rem;
+    strong{
+        font-size: 1.4rem;
+    color:#C2BFF4;
+    }
 `;
 export const Temp = styled.div``;
 export const Statistics = styled.div``;
