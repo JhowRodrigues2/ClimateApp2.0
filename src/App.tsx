@@ -1,11 +1,14 @@
 import TemperatureNow from "./components/TemperatureNow";
+import GlobalProvider from "./context";
 import { AppContainer } from "./styles/GlobalStyles";
 
 function App() {
   return (
-    <AppContainer>
-      <TemperatureNow/>
-    </AppContainer>
+    <GlobalProvider>
+      <AppContainer>
+        <TemperatureNow />
+      </AppContainer>
+    </GlobalProvider>
   );
 }
 
