@@ -27,12 +27,42 @@ display: flex;
 align-items: center;
 justify-self: end;
 padding: 3.2rem 3.2rem 0;
-gap: 0.4rem;
+gap: .4rem;
     strong{
         font-size: 1.4rem;
     color:#C2BFF4;
     }
 `;
-export const Temp = styled.div``;
-export const Statistics = styled.div``;
-export const Info = styled.div``;
+
+export const Temp = styled.div`
+margin:6rem;
+font-weight: 700;
+display: flex;
+justify-content: center;
+span{
+font-size: 2rem;
+color:#dad8f7;
+margin-top: 1.5rem;
+}
+`;
+export const Forecast = styled.div`
+text-align:center;
+font-size:8.8rem;
+text-align: center;
+color:#fff;
+display:flex;
+flex-direction: column;
+gap:0.4rem;
+
+`;
+export const WeatherDescrption = styled.div`
+font-size: 2rem ;
+`
+export const WeatherCloudsIcon = styled.span`
+img{
+  margin-left: 0.5rem;
+  width: 2rem;
+  height: 2rem;
+}
+
+`

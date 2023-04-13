@@ -6,6 +6,8 @@ export const GlobalContext = createContext({});
 interface ContextProps {
     children:ReactNode;
   }
+
+ 
 const GlobalProvider =({children}:ContextProps)=>{
     const [climateData, setClimateData]= useState('')
     const [error,setError] = useState<string>('')

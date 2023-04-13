@@ -6,11 +6,14 @@ const GlobalStyle = createGlobalStyle`
     font-size: 62.5%;
     font-family: 'Lato', sans-serif;
 }
-  body {
-    margin: 0;
-    padding: 0;
-    
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
+
 section{
     background:#6D67D0;
     backdrop-filter: blur(1rem);
@@ -27,7 +30,7 @@ export const AppContainer = styled.main`
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    display: grid;
+    display: flex;
 `;
 
 export default GlobalStyle;
