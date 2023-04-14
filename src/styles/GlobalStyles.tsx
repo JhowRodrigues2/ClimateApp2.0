@@ -13,24 +13,29 @@ const GlobalStyle = createGlobalStyle`
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+body {
+  font-size: 1.6rem;
+}
 
 section{
     background:#6D67D0;
     backdrop-filter: blur(1rem);
     border-radius: 1rem;
-    
    } 
-       
-  
+
 `
 export const AppContainer = styled.main`
-    font-size: 1.6rem;
     min-height: 100vh;
-    background: url(${BackgroundImagem});
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    display: flex;
+    background: url(${BackgroundImagem})no-repeat center/cover;
+    display: grid;
+    place-content: center;
+    padding: 6.4rem;
+    gap: 2.4rem;
+    @media (min-width: 1200px) {
+    grid-template-columns: 48rem 48rem;
+    grid-template-rows: 24.4rem 24.4rem;
+  }
+
 `;
 
 export default GlobalStyle;

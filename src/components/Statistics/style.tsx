@@ -7,11 +7,9 @@ export const StatisticsContainer = styled.div`
 `;
 export const ItemsStats = styled.div`
   flex: 1;
-
   padding: 1.2rem 1.6rem;
   background: rgba(80, 73, 223, 0.6);
   border-radius: 0.6rem;
-
   display: flex;
   align-items: center;
   gap: 1.2rem;
