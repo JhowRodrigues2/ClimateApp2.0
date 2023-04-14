@@ -10,13 +10,14 @@ import Pin from "../../assets/pin.svg";
 import { useContext } from "react";
 import { GlobalContext } from "../../context";
 import Statistics from "../Statistics";
-import TempWind from "../../assets/temp-wind.svg";
-import TempHumidity from "../../assets/temp-humidity.svg";
-import TempCloud from "../../assets/clouds.svg";
+import TempSunrise from "../../assets/temp-sun.svg";
+import TempSunset from "../../assets/temp-sun-in-clouds.svg";
+import TempThermal from "../../assets/temp-thermal.svg";
 import { StatisticsContainer } from "../Statistics/style";
+import Moment from 'moment';
 
 const TemperatureNow = () => {
-  const climateData = useContext(GlobalContext);
+  const  climateData = useContext(GlobalContext);
 
   return (
     <TemperatureNowContainer>
@@ -46,22 +47,20 @@ const TemperatureNow = () => {
           </Temp>
           <StatisticsContainer>
             <Statistics
-              StaticsIcon={TempWind}
-              StaticsTitle={"Vento"}
-              StaticsInfo={climateData.wind.speed}
-              StaticsType={"hm/h"}
+              StaticsIcon={TempThermal}
+              StaticsTitle={"Sensação Térmica"}
+              StaticsInfo={climateData.main.feels_like.toFixed(1)}
+              StaticsType={"°C"}
             />
             <Statistics
-              StaticsIcon={TempHumidity}
-              StaticsTitle={"Umidade"}
-              StaticsInfo={climateData.main.humidity}
-              StaticsType={"%"}
+              StaticsIcon={TempSunrise}
+              StaticsTitle={" Nascer do Sol"}
+              StaticsInfo={Moment.unix(climateData.sys.sunrise).format("HH:mm") }
             />
             <Statistics
-              StaticsIcon={TempCloud}
-              StaticsTitle={"Nuvens"}
-              StaticsInfo={climateData.clouds.all}
-              StaticsType={"%"}
+              StaticsIcon={TempSunset}
+              StaticsTitle={"Pôr do Sol"}
+              StaticsInfo={Moment.unix(climateData.sys.sunset).format("HH:mm") }
             />
           </StatisticsContainer>
         </>

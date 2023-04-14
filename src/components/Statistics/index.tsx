@@ -4,7 +4,7 @@ type StatisticsProps = {
   StaticsIcon: string;
   StaticsTitle: string;
   StaticsInfo: string;
-  StaticsType: string;
+  StaticsType?: string;
 };
 const Statistics = ({
   StaticsIcon,

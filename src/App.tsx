@@ -1,3 +1,4 @@
+import AditionalInformation from "./components/AdditionalInformation";
 import TemperatureNow from "./components/TemperatureNow";
 import GlobalProvider from "./context";
 import { AppContainer } from "./styles/GlobalStyles";
@@ -7,6 +8,7 @@ function App() {
     <GlobalProvider>
       <AppContainer>
         <TemperatureNow />
+        <AditionalInformation/>
       </AppContainer>
     </GlobalProvider>
   );
