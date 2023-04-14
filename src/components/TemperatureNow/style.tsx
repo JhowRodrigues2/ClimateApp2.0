@@ -23,7 +23,54 @@ export const TemperatureNowContainer = styled.section`
     grid-row: 1/2;
   }
 `;
+export const SearchContainer = styled.div`
+height: 4rem;
+display: flex;
+align-items: center;
+justify-content: center;
+input{
+  padding: 0.3rem;
+  width: 44%;
+  height:2rem;
+  font-family: 'Lato', sans-serif;
+  box-shadow: 0 1px 3px rgba(221, 211, 211, 0.12), 0 1px 2px rgba(221, 211, 211, 0.12);
+  border: solid 1px #dad8f7;
+  background: transparent;
+  border-radius: 0.5rem;
+  color:#dad8f7;
+  text-align: center;
+  outline: 0;
+  font-size: 1.4rem;
+  &::placeholder {
+  color: #dad8f7;
+  font-size: 1.2rem;
+  letter-spacing: 0.1rem;
+}
+}
 
+button{ 
+  margin-left: 0.3rem;
+  width: 2rem;
+  height:2rem;  
+  border-radius: 0.5rem;
+  background: rgba(80, 73, 223, 0.8);
+  border: none;
+  cursor: pointer;
+  color:#fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+`
+
+export const ErrorMessage = styled.span`
+text-align: center;
+width: 100%;
+
+
+`
+  
 
 export const Location = styled.div`
 display: flex;

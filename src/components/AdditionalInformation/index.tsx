@@ -11,7 +11,7 @@ import TempCloudy from "../../assets/temp-cloudy.svg";
 import ColdWeather from "../../assets/cold-weather.svg";
 
 const AditionalInformation = () => {
-  const climateData = useContext(GlobalContext);
+  const {climateData} = useContext(GlobalContext);
   return (
     <AditionalInformationContainer>
       {climateData ? (

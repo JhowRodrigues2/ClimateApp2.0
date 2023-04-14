@@ -5,6 +5,8 @@ import {
   Forecast,
   WeatherCloudsIcon,
   WeatherDescrption,
+  SearchContainer,
+  ErrorMessage,
 } from "./style";
 import Pin from "../../assets/pin.svg";
 import { useContext } from "react";
@@ -15,12 +17,18 @@ import TempSunset from "../../assets/temp-sun-in-clouds.svg";
 import TempThermal from "../../assets/temp-thermal.svg";
 import { StatisticsContainer } from "../Statistics/style";
 import Moment from 'moment';
+import {BiSearchAlt} from 'react-icons/bi'
 
 const TemperatureNow = () => {
-  const  climateData = useContext(GlobalContext);
-
+  const  {climateData, handleChange,handleSearch,error } = useContext(GlobalContext);
   return (
     <TemperatureNowContainer>
+    <SearchContainer>
+    <input type="text" placeholder="Digite uma cidade" onChange={handleChange}/>
+      <button onClick={handleSearch}><BiSearchAlt/></button>
+    </SearchContainer>
+    <ErrorMessage>{error}</ErrorMessage>
+
       {climateData ? (
         <>
           <Location>
