@@ -1,11 +1,6 @@
-import { Info, ItemsStats, StatisticsContainer } from "./style";
+import { Info, ItemsStats } from "./style";
+import { StatisticsProps } from "../../interfaces";
 
-type StatisticsProps = {
-  StaticsIcon: string;
-  StaticsTitle: string;
-  StaticsInfo: string;
-  StaticsType?: string;
-};
 const Statistics = ({
   StaticsIcon,
   StaticsTitle,

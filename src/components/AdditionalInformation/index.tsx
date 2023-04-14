@@ -9,6 +9,8 @@ import TempCloud from "../../assets/clouds.svg";
 import SunnyDay from "../../assets/sunny_day.svg";
 import TempCloudy from "../../assets/temp-cloudy.svg";
 import ColdWeather from "../../assets/cold-weather.svg";
+import Initial from '../../assets/initial.svg'
+
 
 const AditionalInformation = () => {
   const {climateData} = useContext(GlobalContext);
@@ -46,14 +48,15 @@ const AditionalInformation = () => {
             <img src={SunnyDay} alt="Imagem Dia Ensolarado" />
           ) : climateData.main.feels_like > 5 &&
             climateData.main.feels_like < 25 ? (
-            <img src={TempCloudy} alt="Imagem Dia Ensolarado" />
+            <img src={TempCloudy} alt="Imagem Dia Nublado" />
           ) : (
-            <img src={ColdWeather} alt="Imagem Dia Ensolarado" />
+            <img src={ColdWeather} alt="Imagem Dia Nevando" />
           )}
         </WeatherImagem>
       ) : (
         ""
-      )}
+        )}
+
     </AditionalInformationContainer>
   );
 };

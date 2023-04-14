@@ -1,14 +1,39 @@
 import React, { createContext, useState, useEffect, ReactNode } from "react";
+import { ContextProps,WeatherData } from "../interfaces";
 
 export const GlobalContext = createContext({});
 
-interface ContextProps {
-  children: ReactNode;
 
-}
 
 const GlobalProvider = ({ children }: ContextProps) => {
-  const [climateData, setClimateData] = useState('');
+
+  const dadosInicias: WeatherData = {
+    name: '',
+    weather: [{
+      main: 'initial',
+      description: '-',
+      icon: ''
+    }],
+    main: {
+      temp: 0,
+      feels_like: 0,
+      humidity: 0
+    },
+    wind: {
+      speed: 0
+    },
+    clouds: {
+      all: 0
+    },
+    sys: {
+      country: '-',
+      sunrise: '-',
+      sunset: '-'
+    },
+
+  }
+
+  const [climateData, setClimateData] = useState<WeatherData>(dadosInicias);
     const[city,setCity] = useState('')
     const [error, setError] = useState("");
     
