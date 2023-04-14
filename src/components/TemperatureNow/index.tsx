@@ -21,7 +21,16 @@ import {BiSearchAlt} from 'react-icons/bi'
 
 const TemperatureNow = () => {
   const  {climateData, handleChange,handleSearch,error } = useContext(GlobalContext);
+
+
+  const capitalizeString=(string: string)=> {
+    return string[0].toUpperCase() + string.slice(1)
+  }
+
   return (
+
+
+    
     <TemperatureNowContainer>
     <SearchContainer>
     <input type="text" placeholder="Digite uma cidade" onChange={handleChange}/>
@@ -41,7 +50,7 @@ const TemperatureNow = () => {
             <Forecast>
               {parseInt(climateData.main.temp)}
               <WeatherDescrption>
-                {climateData.weather[0].description}
+                {capitalizeString(String(climateData.weather[0].description))}
                 <WeatherCloudsIcon>
                   <img
                     src={`http://openweathermap.org/img/wn/${climateData.weather[0].icon}.png`}

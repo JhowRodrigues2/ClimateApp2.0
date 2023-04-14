@@ -49,9 +49,9 @@ const AditionalInformation = () => {
           ) : climateData.main.feels_like > 5 &&
             climateData.main.feels_like < 25 ? (
             <img src={TempCloudy} alt="Imagem Dia Nublado" />
-          ) : (
+          ): climateData.main.feels_like < 5 ? (
             <img src={ColdWeather} alt="Imagem Dia Nevando" />
-          )}
+          ): <img src={Initial} alt="Imagem Dia Nevando" />}
         </WeatherImagem>
       ) : (
         ""
