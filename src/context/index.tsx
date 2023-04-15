@@ -59,13 +59,17 @@ const GlobalProvider = ({ children }: ContextProps) => {
         setClimateData(initialData)
       });
       };
-
+      function handleKeyDown(event:React.KeyboardEvent<HTMLInputElement>) {
+        if (event.key === 'Enter') {
+          handleSearch()
+        }
+      }
 
 
 
 
   return (
-    <GlobalContext.Provider value={{climateData, handleChange,handleSearch, error }}>
+    <GlobalContext.Provider value={{climateData, handleChange,handleSearch, error,handleKeyDown }}>
       {children}
     </GlobalContext.Provider>
   );
