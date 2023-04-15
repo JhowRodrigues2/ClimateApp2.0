@@ -29,14 +29,14 @@ export interface WeatherData {
 
   sys: {
     country: string;
-    sunrise: string | number;
+    sunrise: string | number |boolean;
     sunset: string | number;
   };
 }
 
 export interface StatisticsProps {
   StaticsIcon: string;
-  StaticsTitle: string;
-  StaticsInfo: string;
+  StaticsTitle: string | boolean;
+  StaticsInfo: string | boolean;
   StaticsType?: string;
 };

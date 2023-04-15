@@ -15,6 +15,6 @@ padding: 1rem;
 
 img{
   width: 100%;
-  height: 38.2rem;
+  height: 36.2rem;
 }
 `

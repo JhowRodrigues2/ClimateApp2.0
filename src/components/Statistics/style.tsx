@@ -20,8 +20,12 @@ export const ItemsStats = styled.div`
 `;
 export const Info = styled.div`
 color: #e7e6fb;
+
+
+
 span, p {
     font-size: 1.2rem;
+ 
 }
 
 h5 {
@@ -29,6 +33,7 @@ h5 {
   font-size: 1.8rem;
   display: flex;
   align-items: baseline;
+  justify-content: center;
   gap: 0.4rem;  
 }
 `;

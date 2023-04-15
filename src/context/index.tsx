@@ -12,7 +12,7 @@ const GlobalProvider = ({ children }: ContextProps) => {
     weather: [{
       main: 'initial',
       description: '-',
-      icon: ''
+      icon: '',
     }],
     main: {
       temp: 0,

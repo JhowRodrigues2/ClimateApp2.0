@@ -42,7 +42,11 @@ const AditionalInformation = () => {
       ) : (
         ""
       )}
-      {climateData ? (
+         <WeatherImagem>
+         {climateData.weather[0].main ==='initial'&&
+      <img src={Initial} alt="Imagem Inicial" />}
+         </WeatherImagem>
+      {climateData.weather[0].main !='initial' ? (
         <WeatherImagem>
           {climateData.main.feels_like > 25 ? (
             <img src={SunnyDay} alt="Imagem Dia Ensolarado" />
@@ -51,7 +55,8 @@ const AditionalInformation = () => {
             <img src={TempCloudy} alt="Imagem Dia Nublado" />
           ): climateData.main.feels_like < 5 ? (
             <img src={ColdWeather} alt="Imagem Dia Nevando" />
-          ): <img src={Initial} alt="Imagem Dia Nevando" />}
+          ):""
+        }
         </WeatherImagem>
       ) : (
         ""
