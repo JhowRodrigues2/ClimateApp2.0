@@ -7,7 +7,7 @@ export const GlobalContext = createContext({});
 
 const GlobalProvider = ({ children }: ContextProps) => {
 
-  const dadosInicias: WeatherData = {
+  const initialData: WeatherData = {
     name: '',
     weather: [{
       main: 'initial',
@@ -32,8 +32,7 @@ const GlobalProvider = ({ children }: ContextProps) => {
     },
 
   }
-
-  const [climateData, setClimateData] = useState<WeatherData>(dadosInicias);
+  const [climateData, setClimateData] = useState<WeatherData>(initialData);
     const[city,setCity] = useState('')
     const [error, setError] = useState("");
     
@@ -57,6 +56,7 @@ const GlobalProvider = ({ children }: ContextProps) => {
       })
       .catch((error) => {
         setError(error.message);
+        setClimateData(initialData)
       });
       };
 
