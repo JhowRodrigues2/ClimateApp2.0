@@ -29,12 +29,11 @@ export const ItemsStats = styled.div`
 export const Info = styled.div`
 color: #e7e6fb;
 
-
-
 span, p {
     font-size: 1.2rem;
+    
     @media (max-width:450px){
-
+      text-align: center;
       font-size: 1.0rem;
     }
 }
