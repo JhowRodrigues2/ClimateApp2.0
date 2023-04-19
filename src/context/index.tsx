@@ -1,8 +1,7 @@
-import React, { createContext, useState, useEffect, ReactNode } from "react";
+import React, { createContext, useState } from "react";
 import { ContextProps,WeatherData } from "../interfaces";
 
-export const GlobalContext = createContext({});
-
+export const GlobalContext = createContext<ContextProps>({});
 
 
 const GlobalProvider = ({ children }: ContextProps) => {

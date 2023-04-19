@@ -1,7 +1,12 @@
 import { ReactNode } from "react";
 
 export interface ContextProps {
-  children: ReactNode;
+  children?: ReactNode;
+  climateData?: any,
+  handleChange?(event:React.ChangeEvent<HTMLInputElement>): void,
+  handleSearch?:()=>void,
+  error?:string,
+  handleKeyDown?(event: React.KeyboardEvent<HTMLInputElement>): void;
 }
 
 export interface WeatherData {
@@ -39,4 +44,15 @@ export interface StatisticsProps {
   StaticsTitle: string | boolean;
   StaticsInfo: string | boolean;
   StaticsType?: string;
+};
+
+
+
+export interface UseContextProps {
+ climateData?: any,
+
+ handleChange?(event:React.ChangeEvent<HTMLInputElement>): void,
+ handleSearch?:()=>void,
+ error:string,
+ handleKeyDown?(event: React.KeyboardEvent<HTMLInputElement>): void;
 };
