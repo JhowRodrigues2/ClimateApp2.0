@@ -1,5 +1,5 @@
 import styled, { createGlobalStyle } from "styled-components";
-import BackgroundImagem from "../assets/bg.jpeg"
+import BackgroundImagem from "../assets/bg.jpeg";
 
 const GlobalStyle = createGlobalStyle`
 :root{
@@ -15,27 +15,35 @@ const GlobalStyle = createGlobalStyle`
 }
 body {
   font-size: 1.6rem;
+;
 }
-
 section{
     background:#6D67D0;
     backdrop-filter: blur(1rem);
     border-radius: 1rem;
    } 
+`;
 
-`
 export const AppContainer = styled.main`
-    min-height: 100vh;
-    background: url(${BackgroundImagem})no-repeat center/cover;
-    display: grid;
-    place-content: center;
-    padding: 6.4rem;
-    gap: 2.4rem;
-    @media (min-width: 1200px) {
-    grid-template-columns: 48rem 48rem;
-    grid-template-rows: 24.4rem 24.4rem;
-  }
+  min-width: 100%;
+  min-height: 100vh;
+  background: url(${BackgroundImagem}) no-repeat center/cover;
 
+  display: flex;
+  padding: 6.4rem;
+  justify-content: center;
+  align-items: center;
+  gap: 2.4rem;
+
+  @media (max-width: 1000px) {
+    flex-wrap: wrap;
+    flex-direction: column;
+  }
+  @media (max-width: 590px) {
+    padding-right: 2.4rem;
+    padding-left: 2.4rem;
+
+  }
 `;
 
 export default GlobalStyle;

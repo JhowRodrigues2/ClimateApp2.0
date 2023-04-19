@@ -6,7 +6,7 @@ export const StatisticsContainer = styled.div`
   gap: 0.8rem;
 `;
 export const ItemsStats = styled.div`
-  flex: 1;
+    width: 33%;
   padding: 1.2rem 1.6rem;
   background: rgba(80, 73, 223, 0.6);
   border-radius: 0.6rem;
@@ -17,6 +17,14 @@ export const ItemsStats = styled.div`
     width: 4rem;
     height: 4rem;
   }
+  @media (max-width:590px){
+    padding:0.5rem;
+  flex-direction: column;
+    img {
+    width: 2.3rem;
+    height: 2.3rem;
+  }
+  }
 `;
 export const Info = styled.div`
 color: #e7e6fb;
@@ -25,7 +33,10 @@ color: #e7e6fb;
 
 span, p {
     font-size: 1.2rem;
- 
+    @media (max-width:450px){
+
+      font-size: 1.0rem;
+    }
 }
 
 h5 {
@@ -35,5 +46,9 @@ h5 {
   align-items: baseline;
   justify-content: center;
   gap: 0.4rem;  
+  @media (max-width:450px){
+
+font-size: 1.2rem;
+}
 }
 `;

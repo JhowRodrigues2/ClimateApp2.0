@@ -7,8 +7,12 @@ export const TemperatureNowContainer = styled.section`
   height: 48rem;
   background: url(${BgTempNow});
   position: relative;
-  display: grid;
-  grid-template-rows: max-content 1fr max-content;
+display: flex;
+flex-direction: column;
+@media (max-width:590px){
+  width: 90%;
+
+ }
   &::before {
     position: absolute;
     content: "";
@@ -19,15 +23,20 @@ export const TemperatureNowContainer = styled.section`
     top:-5.6rem;
     left: -5.6rem;
   }
-  @media (min-width: 1200px) {
-    grid-row: 1/2;
-  }
 `;
 export const SearchContainer = styled.div`
 height: 4rem;
 display: flex;
 align-items: center;
 justify-content: center;
+
+@media (max-width:500px){
+  justify-content: end;
+padding-right: 1rem;
+input{
+  width: 85%;
+}
+ }
 input{
   padding: 0.3rem;
   width: 44%;
@@ -45,6 +54,9 @@ input{
   color: #dad8f7;
   font-size: 1.2rem;
   letter-spacing: 0.1rem;
+}
+@media (max-width:500px){
+  width: 55%;
 }
 }
 
@@ -76,7 +88,7 @@ color:#992424;
 export const Location = styled.div`
 display: flex;
 align-items: center;
-justify-self: end;
+justify-content: right;
 padding: 3.2rem 3.2rem 0;
 gap: .4rem;
     strong{
